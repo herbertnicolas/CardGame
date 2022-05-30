@@ -1,0 +1,6 @@
+.deck{
+    background-color: var(--color-almost-black);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
