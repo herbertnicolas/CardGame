@@ -1,9 +1,8 @@
 import './style.css';
 import './src/styles/settings/colors.css'
 import './src/styles/elements/base.css'
-import Card from './src/components/Card';
 import Deck from './src/objects/Deck'
-import PlayerName from './src/components/Score/PlayerName';
+import ScoreBoard from './src/objects/ScoreBoard';
 
 const $root = document.querySelector("#root");
 //const $htmlDeck = Deck(5);
@@ -13,9 +12,9 @@ const $root = document.querySelector("#root");
 $root.insertAdjacentHTML(
     "beforeend", 
     `
-        ${PlayerName("Player1")}
-        ${PlayerName("Player2")}
+        ${ScoreBoard()}
         ${Deck(5)}
+        
     `
 );
 
