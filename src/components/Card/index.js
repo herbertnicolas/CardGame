@@ -1,10 +1,11 @@
 import './style.css';
 
-function Card(){
+function Card(logo="h-letter", alt="logo-verso"){
+    
     return( /*html*/
         `
-        <article class="card-square">
-            <img src="images/h-letter.png" alt="letra.png" 
+        <article class="card-back">
+            <img src="images/${logo}.png" alt="${alt}.png" 
             width="100"
             height="auto">
         </article>
