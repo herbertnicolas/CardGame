@@ -1,0 +1,18 @@
+.card-frente-verso{
+    --width: 130px;
+    --height: 160px;
+
+    width: var(--height);
+    height: var(--width);
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.card-frente-verso > .front, 
+.card-frente-verso > .back{
+    position: absolute;
+} 
+
+.back{
+    
+}

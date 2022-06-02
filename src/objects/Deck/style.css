@@ -2,6 +2,7 @@
     background-color: var(--color-almost-black);
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-
+    justify-content: space-evenly;
+    gap: 20px;
+    perspective: 400px;
 }
