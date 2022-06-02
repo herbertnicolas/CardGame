@@ -5,8 +5,8 @@ function CardFrontBack(){
     return ( /*html*/
     `
         <article>
-            ${Card()}
-            ${Card()}
+            ${Card("logo-js", "logo-js")}
+            ${Card("logo-css", "logo-css")}
         </article>
     `
     );
