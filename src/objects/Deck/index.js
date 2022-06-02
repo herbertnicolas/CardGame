@@ -1,14 +1,15 @@
 import './style.css';
 import Card from '../../components/Card';
+import CardFrontBack from '../../components/CardFrontBack';
 
 function Deck(qtdCards){
-    const $htmlCard = Card();
-    const $htmlCards = $htmlCard.repeat(qtdCards)
+    const $htmlCardFrontBack = CardFrontBack();
+    const $htmlContent = $htmlCardFrontBack.repeat(qtdCards)
     
-    return `
-    <section class = "deck">
-        ${$htmlCards}
-    </section>
+    return /*html*/`
+        <section class = "deck">
+            ${$htmlContent}
+        </section>
     `
     ;
 }
