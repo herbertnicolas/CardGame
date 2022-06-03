@@ -6,10 +6,10 @@ function CardFrontBack(){
     return ( /*html*/
     `
         <article class = "card-frente-verso">
-            <div class="front">
+            <div class="card -back">
                 ${Card("logo-js", "logo-js")}
             </div>
-            <div class="back">
+            <div class="card -front">
                 ${Card("logo-css", "logo-css")}
             </div>
         </article>

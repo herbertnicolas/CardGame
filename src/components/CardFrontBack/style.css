@@ -6,13 +6,23 @@
     height: var(--width);
     position: relative;
     transform-style: preserve-3d;
+    transition: transform 400ms ease-in-out;
+}
+.card-frente-verso.-active{
+    transform: rotateY(180deg);
+
 }
 
-.card-frente-verso > .front, 
-.card-frente-verso > .back{
+.card-frente-verso > .card {
     position: absolute;
+    backface-visibility: hidden;
 } 
 
-.back{
+.card-frente-verso > .card.-front {
+    transform: rotateY(180deg);
     
+} 
+
+.card-frente-verso > .card.-back > .card-face {
+    background-color: var(--color-deep-taupe);
 }
