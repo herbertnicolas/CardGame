@@ -2,6 +2,7 @@
     --width: 130px;
     --height: 160px;
 
+    
     width: var(--height);
     height: var(--width);
     position: relative;
