@@ -4,12 +4,15 @@ import './style.css';
 window.cardFrontBack = {}
 window.cardFrontBack.handleClick = (event) => {
     const $alvo = event.target.closest('.card-frente-verso');
+    $alvo.classList.toggle('-active')
     
+    /* OU
     if($alvo.classList.contains('-active')){
         $alvo.classList.remove('-active');
     }else{
         $alvo.classList.add('-active')
-    }
+    }*/
+
 }
 
 function CardFrontBack(){
