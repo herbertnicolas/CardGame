@@ -3,7 +3,8 @@ import './style.css';
 //deixando a funçao handleClick no escopo global, pra ser acessada
 window.cardFrontBack = {}
 window.cardFrontBack.handleClick = (event) => {
-    const $alvo = event.target.parentNode.parentNode.parentNode;
+    const $alvo = event.target.closest('.card-frente-verso');
+    
     $alvo.classList.add('-active')
 }
 
