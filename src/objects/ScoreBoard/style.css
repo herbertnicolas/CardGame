@@ -1,4 +1,9 @@
 .score-board{
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+}
+.seta{
+    width: 100%;
 }

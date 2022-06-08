@@ -1,0 +1,30 @@
+.score{
+    box-sizing: border-box;
+    display: flex;
+    width: 50px;
+    height: 20px;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 1px;
+    gap:1px;
+}
+
+.score > .pointer{
+    background-color: var(--color-old-silver);
+    text-indent: -999px;
+    overflow: hidden;
+    width: 33%;
+}
+
+.score[data-pontos="1"] > .pointer:first-child{
+    background-color: var(--color-mantis);
+}
+
+.score[data-pontos="2"]{
+    flex-direction: row-reverse;
+}
+.score[data-pontos="2"] > .pointer:nth-child(n+2){
+    background-color: var(--color-mantis);
+}
+.score[data-pontos="3"] > .pointer{
+    background-color: var(--color-mantis);
+}

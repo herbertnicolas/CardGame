@@ -3,17 +3,15 @@ import './style.css';
 //deixando a funçao handleClick no escopo global, pra ser acessada
 window.cardFrontBack = {}
 window.cardFrontBack.handleClick = (event) => {
-    const $alvo = event.target.closest('.card-frente-verso');
+    const $alvo = event.target.closest('.card-frente-verso')
     $alvo.classList.toggle('-active')
-    
+}
     /* OU
     if($alvo.classList.contains('-active')){
         $alvo.classList.remove('-active');
     }else{
         $alvo.classList.add('-active')
     }*/
-
-}
 
 function CardFrontBack(){
 //funcao responsavel pelas faces de cada carta
@@ -22,7 +20,7 @@ function CardFrontBack(){
     `
         <article class = "card-frente-verso" onClick="cardFrontBack.handleClick(event)">
             <div class="card -back">
-                ${Card("logo-js", "logo-js")}
+                ${Card()}
             </div>
             <div class="card -front">
                 ${Card("logo-css", "logo-css")}
