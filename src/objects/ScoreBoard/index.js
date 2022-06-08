@@ -15,8 +15,8 @@ function ScoreBoard(){
             ${PlayerName("Player1")}
             ${PlayerScore(3)}
             ${Vs("vs")}
-            ${PlayerName("Player2")}
             ${PlayerScore(2)}
+            ${PlayerName("Player2")}
         </header>
         `
     )
