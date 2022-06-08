@@ -1,17 +1,14 @@
 import PlayerName from '../../components/PlayerName';
 import PlayerScore from '../../components/PlayerScore';
 import Vs from '../../components/Vs';
+import Arrow from '../../components/Arrow';
 import './style.css';
 
 function ScoreBoard(){
     return( //html
         `
-        <div class = "seta">
-                <img src="images/arrow.png" alt=""
-                width=20px height=10px>
-        </div>
-
         <header class = "score-board">
+            ${Arrow(1)}
             ${PlayerName("Player1")}
             ${PlayerScore(3)}
             ${Vs("vs")}

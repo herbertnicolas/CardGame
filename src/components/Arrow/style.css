@@ -1,0 +1,11 @@
+.arrow{
+    position: absolute;
+    top: 4px;
+    transform: translateX(-32px);
+    transition: transform 400ms ease-in-out;
+}
+
+.arrow[data-currentPlayer="2"]{
+    transform: translateX(32px);
+
+}
