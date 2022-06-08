@@ -2,16 +2,15 @@
     --width: 130px;
     --height: 160px;
 
-    
-    width: var(--height);
-    height: var(--width);
+    cursor: pointer;
+    width: var(--width);
+    height: var(--height);
     position: relative;
     transform-style: preserve-3d;
     transition: transform 400ms ease-in-out;
 }
 .card-frente-verso.-active{
     transform: rotateY(180deg);
-
 }
 
 .card-frente-verso > .card {
