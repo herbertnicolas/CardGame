@@ -13,7 +13,7 @@ window.cardFrontBack.handleClick = (event) => {
         $alvo.classList.add('-active')
     }*/
 
-function CardFrontBack(){
+function CardFrontBack(logo, alt){
 //funcao responsavel pelas faces de cada carta
     
     return ( /*html*/
@@ -23,7 +23,7 @@ function CardFrontBack(){
                 ${Card()}
             </div>
             <div class="card -front">
-                ${Card("logo-css", "logo-css")}
+                ${Card(logo, alt)}
             </div>
         </article>
     `

@@ -14,7 +14,7 @@ $root.insertAdjacentHTML(
     "beforeend", 
     `
         ${ScoreBoard()}
-        ${Deck(6)}
+        ${Deck(2)}
         
     `
 );
