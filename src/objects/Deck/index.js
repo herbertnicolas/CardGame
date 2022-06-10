@@ -31,13 +31,29 @@ const baralho = [
 
 function Deck(qtdCards){
 
+    window.Deck = {}
+    window.Deck.handleClick = () => {
+        const $deck = document.querySelector('.deck') 
+        const $allActives = $deck.querySelectorAll('.card-frente-verso.-active')
+        //console.log($allActives)
+        
+        //const end = false;
+        if( $allActives.length === 2 ){
+            setTimeout(() => { 
+                $allActives.forEach((card) => { 
+                card.classList.remove('-active') })
+            }, 1000);
+            //end = true;
+        }
+    }
+    
+
     const htmlBaralho = baralho.map((carta) => CardFrontBack(carta.logo, carta.alt));
     const $htmlContent = htmlBaralho.join('');
-    console.log($htmlContent)
     //const $htmlContent = $htmlCardFrontBack.repeat(qtdCards)
     
     return /*html*/`
-        <section class = "deck">
+        <section class="deck" onClick="Deck.handleClick()">
             ${$htmlContent}
         </section>
     `
