@@ -1,6 +1,7 @@
 import './style.css';
 
 function Arrow(currentPlayer = 1){
+
     return( /*html*/
     `
         <img class="arrow" data-currentPlayer=${currentPlayer}
