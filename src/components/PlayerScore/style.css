@@ -15,16 +15,16 @@
     width: 33%;
 }
 
-.score[data-pontos="1"] > .pointer:first-child{
+.score[data-pontos='1'] > .pointer:first-child{
     background-color: var(--color-mantis);
 }
 
-.score[data-pontos="2"]{
+.score[data-pontos='2']{
     flex-direction: row-reverse;
 }
-.score[data-pontos="2"] > .pointer:nth-child(n+2){
+.score[data-pontos='2'] > .pointer:nth-child(n+2){
     background-color: var(--color-mantis);
 }
-.score[data-pontos="3"] > .pointer{
+.score[data-pontos='3'] > .pointer{
     background-color: var(--color-mantis);
 }
