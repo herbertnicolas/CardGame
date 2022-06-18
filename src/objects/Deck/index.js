@@ -32,8 +32,8 @@ const baralho = [
 function Deck(qtdCards){
 /* BUGS */
 // 1 - TODAS AS CARTAS VIRANDO QUANDO ERRA
-// 2 - $allActives[index] is undefined
-// 3 - QUANDO CLICA 
+// 2 - $allActives[0].childNodes[3].children[0].innerHTML 
+// nao parece ser o caminho certo quando o primeiro clicado é o JS
     var index = 0;
     var clicks = [];
     var indiceClicks = 0;
@@ -44,8 +44,11 @@ function Deck(qtdCards){
         const $allActives = $deck.querySelectorAll('.card-frente-verso.-active');
         
         
-        var novoCaminho = $allActives[0].childNodes[3].children[0].innerHTML;
-        
+        var novoCaminho = $allActives[0].childNodes[3].children[0].innerHTML;   //ou $allActives[0].childNodes[3].children[0].lastElementChild.alt pra comparar pelo alt da logo
+        // console.log($allActives[0])
+        // console.log("\nADICIONADO AO ARRAY: " + $allActives[0].childNodes[3].children[0].innerHTML)
+        console.log("____________________________________")
+       
         // console.log(novoCaminho)
         clicks.push(novoCaminho);
 
@@ -73,12 +76,12 @@ function Deck(qtdCards){
             const getScore = parseInt($score.getAttribute('data-pontos'));
             $score.setAttribute('data-pontos', getScore + 1);
         }
-        console.log("\n\n\nclicks[0] "+ clicks[0])
-        console.log("clicks[1] "+ clicks[1])
-        console.log("clicks[2] "+ clicks[2])
-        console.log("clicks[3] "+ clicks[3])
-
+        
         if( clicks.length % 2 === 0 ){ //trocar por %2 == 0
+            console.log("\n\n\nclicks[0] "+ clicks[0])
+            console.log("clicks[1] "+ clicks[1])
+            console.log("clicks[2] "+ clicks[2])
+            console.log("clicks[3] "+ clicks[3])
             // console.log(indiceClicks)
             // console.log("vira ou nao vira???")
             const $seta = document.querySelector('.arrow');
@@ -127,3 +130,15 @@ function Deck(qtdCards){
 }
 
 export default Deck;
+
+
+
+/* FALTANDO 
+
+1- ALEATORIZAR
+2- TELA DE VITORIA
+3- MUDAR BACKGROUND
+4- COLOCAR DEV HERBERTNICOLAS EMBAIXO
+5- TELA DE DIGITE O NOME DO JOGADOR
+
+*/
