@@ -44,8 +44,9 @@ function Deck(qtdCards){
         const $allActives = $deck.querySelectorAll('.card-frente-verso.-active');
         
         
-        var novoCaminho = $allActives[index].childNodes[3].children[0].innerHTML;
-        console.log($allActives)
+        var novoCaminho = $allActives[0].childNodes[3].children[0].innerHTML;
+        
+        // console.log(novoCaminho)
         clicks.push(novoCaminho);
 
         // clicks.forEach(function(way, i) {
@@ -72,15 +73,22 @@ function Deck(qtdCards){
             const getScore = parseInt($score.getAttribute('data-pontos'));
             $score.setAttribute('data-pontos', getScore + 1);
         }
-        
+        console.log("\n\n\nclicks[0] "+ clicks[0])
+        console.log("clicks[1] "+ clicks[1])
+        console.log("clicks[2] "+ clicks[2])
+        console.log("clicks[3] "+ clicks[3])
 
         if( clicks.length % 2 === 0 ){ //trocar por %2 == 0
             // console.log(indiceClicks)
+            // console.log("vira ou nao vira???")
             const $seta = document.querySelector('.arrow');
             const cur = $seta.getAttribute("data-currentPlayer");
             //console.log($caminhoLogoB)
-            console.log("if(clicks" + "[" + indiceClicks + "]" + "== clicks[" + (indiceClicks + 1) + "]")
+            console.log("if(clicks" + "[" + indiceClicks + "]" + " == clicks[" + (indiceClicks + 1) + "]")
+           
             if(clicks[indiceClicks] == clicks[indiceClicks + 1]){
+                
+                console.log("É IGUAL")
                 if(cur == 1) marcaPontoUm();
                 if(cur == 2) marcaPontoDois();
                 
@@ -88,21 +96,21 @@ function Deck(qtdCards){
                     trocaVez();
                 },400)
 
-                indiceClicks = indiceClicks + 2;
             }else{
                 // for(i = index; i < clicks.length; i++){
-
-                // }
+                    
+                    // }
                 setTimeout(() => { 
                     $allActives.forEach((card) => { 
-                    card.classList.remove('-active') })
+                        card.classList.remove('-active') })
 
-                    trocaVez();
+                        trocaVez();
                 }, 1000);
             }
+            indiceClicks = indiceClicks + 2;
         }
         // console.log(index);
-        index = index + 1;
+        index++;
     }
     
 
